@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alumnos</title>
+    <link rel="icon" sizes="192x192" href="img/escudo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+        <section class="tipo--cliente flex alinear-derecha">
+            <a href="https://www.instagram.com/unimagdalena/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <rect x="4" y="4" width="16" height="16" rx="4" />
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                </svg>
+            </a>
+
+            <a href="https://web.facebook.com/UniversidadDelMagdalena/?_rdc=1&_rdr">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                </svg>
+            </a>
+
+            <a href="https://twitter.com/unimagdalena">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                </svg>
+            </a>
+
+            <a href="https://www.youtube.com/user/unimagdalenatv">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <rect x="3" y="5" width="18" height="14" rx="4" />
+                    <path d="M10 9l5 3l-5 3z" />
+                </svg>
+            </a>
+
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitch" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z" />
+                    <line x1="16" y1="8" x2="16" y2="12" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                </svg>
+            </a>
+
+            <div class="nav--sitio">
+                <nav class="navsitio-bg">
+                    <a href="#">Ciudadano</a>
+                    <a href="#">Aspirantes</a>
+                    <a href="#">Estudiantes</a>
+                    <a href="#">Docentes</a>
+                    <a href="#">Egresados</a>
+                    <a href="#">Funcionarios</a>
+                    <a href="#">Mapa del sitio</a>
+                </nav>
+            </div>
+
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                </svg>
+            </a>
+        </section>
+
+        <section class="contenedor--header flex">
+
+            <div class="flex">
+                <a href="index.html"></a>
+                <img class="logo" src="img/escudo.png">
+                <h1 class="titulo">universidad del<br>
+                    <span>magdalena</span>
+                </h1>
+                </a>
+            </div>
+
+            <div class="nav--principal">
+                <nav class="nav--bg">
+                    <a href="index.html">Inicio</a>
+                    <a href="proyecto.html">Proyecto</a>
+                    <a href="alumnos.html">Alumnos</a>
+                    <a href="asistencia.html">Asistencia</a>
+                    <a href="perfil.html">Mi perfil</a>
+                    <a href="sesion.html">Cerrar sesion</a>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main>
+
+        <div class="contenedor--lista sombra hoja">
+            <div>
+                <div class="infoHeader">
+                    <p>Programa/Facultad: </p>
+                    <p>Materia: </p>
+                    <p>Grupo:1 </p>
+                </div>
+                <div class="infoHeader">
+                    <p>INGENIERIA DE SISTEMAS</p>
+                    <p>PROGRAMACIÓN PARA WEB</p>
+                    <p>Periodo: 2022II | Docente: JOHAN ALBERTO ROBLES SOLANO</p>
+                </div>
+            </div>
+
+            <table id="listaAsis">
+                <caption>Formato de asistencia estudiantil y seguimiento académico</caption>
+                <tr>
+                    <th>No.</th>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Firma</th>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">1</td>
+                    <td id="codigo">2015214006</td>
+                    <td><a href="">ALVAREZ HIDALGO LUIS CARLOS</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">2</td>
+                    <td id="codigo">2018214063</td>
+                    <td><a href="">ARANGO DAZA ROMEL CARLOS</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">3</td>
+                    <td id="codigo">2016214100</td>
+                    <td><a href="">ARIZA TETAY LEONARDO RENE</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">4</td>
+                    <td id="codigo">2018214027</td>
+                    <td><a href="Hoja de vida.html">AVILA PINEDA CRISTIAN JAIR</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">5</td>
+                    <td id="codigo">2019214040</td>
+                    <td><a href="">BENJUMEA MUÑETON DUBIER DAVID</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">6</td>
+                    <td id="codigo">2018214013</td>
+                    <td><a href="">CALDERON BLANCO JOSE LUIS</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">7</td>
+                    <td id="codigo">2018214013</td>
+                    <td><a href="">CANABAL PEREZ JOSTEIN</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">8</td>
+                    <td id="codigo">2019214068</td>
+                    <td><a href="">CARRASCAL REYES EDINSON</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">9</td>
+                    <td id="codigo">2019214034</td>
+                    <td><a href="">CASTRO SANCHEZ ROBERT EDUARDO</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">10</td>
+                    <td id="codigo">2014114129</td>
+                    <td><a href="">DE FEX BLANCO LUIS EDUARDO</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">11</td>
+                    <td id="codigo">2019214031</td>
+                    <td><a href="">ESCALANTE CASTRO FABIAN ALI</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">12</td>
+                    <td id="codigo">2016214078</td>
+                    <td><a href="">ESPAÑA HERRERA JONATHAN ANDRES</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">13</td>
+                    <td id="codigo">2018214032</td>
+                    <td><a href="">FAJARDO PEREZ LUIS ESTEBAN</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">14</td>
+                    <td id="codigo">2019114058</td>
+                    <td><a href="">FERNANDEZ ACOSTA ESTEBAN CAMILO</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">15</td>
+                    <td id="codigo">2015214051</td>
+                    <td><a href="">GARAY GONZALEZ SERGIO ANDRES</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">16</td>
+                    <td id="codigo">2019114066</td>
+                    <td><a href="">GUTIERREZ OROZCO TOMAS JOSE</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">17</td>
+                    <td id="codigo">2019214062</td>
+                    <td><a href="">HERRERA CAICEDO RAFAEL FRANCISCO</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">18</td>
+                    <td id="codigo">2016214071</td>
+                    <td><a href="">MANCERA CARO JUAN LUIS</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">19</td>
+                    <td id="codigo">2015114002</td>
+                    <td><a href="">MATEUS RAMIREZ LUIS ALBERTO</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">20</td>
+                    <td id="codigo">20091114059</td>
+                    <td><a href="">MERIÑO CAJAR ARNALDO ANDRES</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">21</td>
+                    <td id="codigo">2019214053</td>
+                    <td><a href="">OLASCOAGA SALCEDO DEIVIS JESID</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">22</td>
+                    <td id="codigo">2015214100</td>
+                    <td><a href="">PEREZ VILLAMIZAR CAMILO ANDRES</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">23</td>
+                    <td id="codigo">20122214100</td>
+                    <td><a href="">POLO ARIAS ANDRES DAVID</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">24</td>
+                    <td id="codigo">2018214057</td>
+                    <td><a href="">PRADO MARQUEZ WALTER DAVID</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">25</td>
+                    <td id="codigo">2018114072</td>
+                    <td><a href="">ROMERO OROZCO DAILIN DAYANA</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">26</td>
+                    <td id="codigo">2019214082</td>
+                    <td><a href="">ROSADO HERNANDEZ ERICK RICARDO</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr class="gris">
+                    <td id="numero">27</td>
+                    <td id="codigo">2018214087</td>
+                    <td><a href="">SIMON ROMERO YEILER ANDRES</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td id="numero">28</td>
+                    <td id="codigo">2016114138</td>
+                    <td><a href="">VIDES CARDENAS JUAN DAVID</a></td>
+                    <td id="firma"><select id="select" name="select">
+                            <option></option>
+                            <option>Asístio</option>
+                            <option>Sin Asistencia</option>
+                            <option>Excusa</option>
+                        </select></td>
+                </tr>
+
+            </table>
+
+            <table>
+                <tr>
+                    <td>FECHA:<form><input type="date" id="Fecha" name="fecha"></form>
+                    </td>
+                    <td>Hora de inicio:<form><input type="time" id="HoraI" name="inico"></form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>SALON: Lab. Tecnologias de la Info.</td>
+                    <td>Hora de Salida:<form><input type="time" id="HoraF" name="fin"></form>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="contenedorM">
+
+                <table id="tabla1">
+                    <tr class="gris">
+                        <td id="ancho">TEMA DE CLASES</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="text" id="Tema" name="tema">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr class="gris">
+                        <td>
+                            <form>
+                                <input type="text" id="Subtema" name="subtema">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="tabla2">
+                    <tr class="gris">
+                        <td>FIRMA DEL DOCENTE</td>
+                    </tr>
+                    <tr>
+                        <td id="filaVaciaD"></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <footer class="footer">
+        <div class="contenedor--footer grid--imagenes">
+            <div class="  flex">
+                <img class="img--footer" src="img/escudo.png" alt="">
+                <img class="img--footer" src="img/logo.png" alt="">
+                <img class="img--footer" src="img/colombia.png" alt="">
+            </div>
+
+            <div>
+                <img class="img--footer__alargadas" src="img/incontec.png" alt="">
+                <img class="img--footer__alargadas2" src="img/certificado.png" alt="">
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

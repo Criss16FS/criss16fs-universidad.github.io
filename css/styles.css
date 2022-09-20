@@ -1,0 +1,783 @@
+html {
+  font-size: 62.5%;
+  /*-----Hack 1rem=10px -----*/
+  box-sizing: border-box;
+  /*-----Hack box model -----*/
+  scroll-snap-type: y mandatory;
+  /*-----Hacer scroll en las sesiones (direcciones X,Y)-----*/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*---PALETA DE COLORES---*/
+:root {
+  --primario: #004a87;
+  --secundario: #c08e2d;
+  --terceario: #D17900;
+  --alternativo3: #003a6b;
+  --luz: #ffffff;
+  --oscuro: #212121;
+  --alternativo: #bee5eb;
+  --alternativo2: #DFE9F3;
+  --alternativo4: ;
+
+  --fuentePrincipal: 'Open Sans', sans-serif;
+  --fuenteSecundaria: 'Roboto', sans-serif;
+}
+
+/*----- Generalidades -----*/
+body {
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--luz);
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--oscuro);
+}
+
+/*----- utilidades */
+
+.flex {
+  display: flex;
+}
+
+.alinear-derecha {
+  justify-content: flex-end;
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 2rem auto;
+}
+
+/*---------------- ESTILO DEL HEADER Y EL FOOTER ----------------*/
+header {
+  background-image: linear-gradient(to top, var(--secundario) 4%, var(--primario) 0%);
+}
+
+.contenedor--header {
+  width: 100rem;
+  height: 10rem;
+  margin: 0 auto;
+}
+
+.tipo--cliente {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--alternativo3);
+  padding: 0.5rem 0.5rem;
+}
+
+.nav--sitio a {
+  color: var(--luz);
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+.logo {
+  margin: auto 0.5rem;
+}
+
+.titulo {
+  color: var(--luz);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.6rem;
+  text-decoration: none;
+  margin: auto 1rem;
+}
+
+.titulo span {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.titulo:hover {
+  text-decoration: underline;
+}
+
+.nav--principal {
+  width: auto;
+  margin: auto 2rem;
+}
+
+.nav--bg {
+  justify-content: center;
+}
+
+.nav--bg a {
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--luz);
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+/*-------------------------------------------------*/
+.footer {
+  background-color: var(--primario);
+  width: 100%;
+}
+
+.contenedor--footer {
+  width: 85rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contenedor--footer {
+    width: 100%;
+  }
+}
+
+.grid--imagenes {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+  padding: 2rem 0;
+}
+
+
+.img--footer {
+  margin: 0 0.5rem;
+  width: 8.5rem;
+  height: 8.5rem;
+}
+
+.img--footer__alargadas {
+  width: 13rem;
+  height: 8.5rem;
+}
+
+.img--footer__alargadas2 {
+  width: 35rem;
+  height: 8.5rem;
+}
+
+@media (max-width: 480px) {
+  .img--footer {
+    margin: 0 0.5rem;
+    width: 5rem;
+    height: 5.5rem;
+  }
+  
+  .img--footer__alargadas {
+    width: 9rem;
+    height: 5.5rem;
+  }
+  
+  .img--footer__alargadas2 {
+    width: 20rem;
+    height: 5.5rem;
+  }
+    
+}
+
+
+/*---------------- HASTA AQUI LLEGA EL ESTILO DEL HEADER Y EL FOOTER QUE SE REPITE EN TODAS LAS PAGINAS ----------------*/
+
+/*---------------- PAGINA PRINCIPAL ----------------*/
+.proxi {
+  text-transform: uppercase;
+  font-size: 10rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--alternativo3);
+  letter-spacing: 1rem;
+
+}
+
+/*---------------- PAGINA ALUMNOS ----------------*/
+
+.grid--contenido {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  column-gap: 3rem;
+}
+
+@media (max-width: 1280px) {
+  .grid--contenido {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid--contenido {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 10rem;
+    margin: 2rem 2rem;
+  }
+
+}
+
+
+
+.contenedor--clase {
+  width: 95%;
+  height: 80rem;
+  background-color: var(--primario);
+  border-radius: 1rem;
+  margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+  .contenedor--clase {
+    width: 95%;
+    height: 80rem;
+    background-color: var(--primario);
+    border-radius: 1rem;
+    margin: 2rem auto;
+  }
+
+}
+
+.grid--datos {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 37% 9% 6% 6% 6% 37%;
+}
+
+.profesor,
+.programa,
+.curso,
+.grupo,
+.periodo,
+.formulario {
+  color: var(--luz);
+  text-transform: uppercase;
+}
+
+.programa,
+.grupo,
+.formulario {
+  background-color: var(--alternativo3);
+}
+
+.profesor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*--- formulario ---*/
+
+.formulario {
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  color: var(--terceario);
+}
+
+.formulario legend {
+  color: var(--luz);
+  text-align: center;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.campo a {
+  color: var(--alternativo2);
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .contenedor-campos {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 1rem;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  color: var(--luz);
+  font-weight: bold;
+  margin-bottom: .5rem;
+  display: block;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+.formulario__bt {
+  background-color: var(--terceario);
+  width: 12rem;
+  height: 3rem;
+  color: var(--luz);
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.formulario__bt:hover {
+  background-color: var(--terceario);
+  color: var(--oscuro);
+  font-weight: 700;
+}
+
+/*__________________________________________*/
+
+/*--responsive contenido alumnos--*/
+.contenido {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+
+@media (max-width: 1280px) {
+  .contenido {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+
+}
+
+/*______________*/
+
+.contenedor--alumnos {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+  .contenedor--alumnos {
+    width: 100%;
+
+    margin: 2rem auto;
+  }
+
+}
+
+.sombra {
+  -webkit-box-shadow: 0px 15px 15px 0px rgba(112, 112, 112, 0.54);
+  -moz-box-shadow: 0px 15px 15px 0px rgba(112, 112, 112, 0.54);
+  box-shadow: 0px 15px 15px 0px rgba(112, 112, 112, 0.54);
+  background-color: var(--luz);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.titulo--alumnos {
+  font-family: var(--fuentePrincipal);
+  color: var(--luz);
+  text-transform: uppercase;
+  background-color: var(--primario);
+  border-radius: 1rem;
+  letter-spacing: 1rem;
+}
+
+.usuario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.usuario__apellido {
+  line-height: 2;
+  text-align: center;
+}
+
+.usuario img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.usuario .img--profesor {
+  width: 18rem;
+  height: 18rem;
+}
+
+.contenido .usuario {
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--alternativo);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 0 auto;
+}
+
+.boton:hover {
+  text-decoration: none;
+  background-color: var(--primario);
+  color: var(--luz);
+  padding: 0 1rem;
+  font-weight: 400;
+  border-radius: 1rem;
+}
+
+/*---------------------- condicion -------------------*/
+.condicion {
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.lbl {
+  display: inline-block;
+  height: 3.3rem;
+  width: 6.5rem;
+  background-color: var(--terceario);
+  border-radius: 10rem;
+  cursor: pointer;
+  position: relative;
+  transition: .2s;
+
+}
+
+.lbl::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--luz);
+  border-radius: 10rem;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  transition: .2s;
+
+}
+
+#switch:checked+.lbl {
+  background-color: green;
+}
+
+#switch:checked+.lbl::after {
+  left: 4rem;
+}
+
+#switch {
+  display: none;
+}
+
+#switch2:checked+.lbl {
+  background-color: green;
+}
+
+#switch2:checked+.lbl::after {
+  left: 4rem;
+}
+
+#switch2 {
+  display: none;
+}
+
+#switch3:checked+.lbl {
+  background-color: green;
+}
+
+#switch3:checked+.lbl::after {
+  left: 4rem;
+}
+
+#switch3 {
+  display: none;
+}
+
+#switch4:checked+.lbl {
+  background-color: green;
+}
+
+#switch4:checked+.lbl::after {
+  left: 4rem;
+}
+
+#switch4 {
+  display: none;
+}
+
+#switch5:checked+.lbl {
+  background-color: green;
+}
+
+#switch5:checked+.lbl::after {
+  left: 4rem;
+}
+
+#switch5 {
+  display: none;
+}
+
+#switch6:checked+.lbl {
+  background-color: green;
+}
+
+#switch6:checked+.lbl::after {
+  left: 4rem;
+}
+
+#switch6 {
+  display: none;
+}
+
+
+/*------------ sesion de herramientas--------------------*/
+.contenedor--herramientas {
+  width: 25rem;
+  height: 25rem;
+  background-color: var(--primario);
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+
+.herramientas {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 16rem;
+  row-gap: 1rem;
+}
+
+.herramientas__titulo {
+  text-decoration: underline;
+}
+
+.herramientas__titulo,
+.atajos__titulo,
+.atajos a {
+  color: var(--luz);
+  text-transform: uppercase;
+}
+
+.atajos {
+  display: grid;
+  grid-template-columns: 25rem;
+  grid-template-rows: 4rem 4rem 4rem 4rem;
+  row-gap: 1rem;
+}
+
+.atajos__titulo {
+  background-color: var(--alternativo3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.herramientas__titulo,
+.atajo1,
+.atajo2,
+.atajo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.atajos a:hover {
+  background-color: var(--alternativo3);
+  border-radius: 1rem;
+}
+
+/*_----------- lista de asistencia--------------------*/
+
+
+.contenedor--lista {
+  width: 100rem;
+  margin: 2rem auto;
+}
+
+.textos {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.listaCont {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+}
+
+.listaForm {
+  font-family: MontereyBold;
+  color: black;
+  font-size: 20px;
+
+}
+
+.hoja {
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 0%;
+  box-shadow: 3px 5px 10px grey;
+  background-color: white;
+  overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .hoja {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+.infoHeader {
+  margin-left: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 16px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  width: 80%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+caption {
+  font-weight: bold;
+  border: 2px solid #D1D1D1;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 3px;
+}
+
+th {
+  background-color: #2666C9;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+th,
+td {
+  font-size: 15px;
+  border: 2px solid black;
+}
+
+
+#firma {
+  width: 30%;
+}
+
+#numero {
+  text-align: right;
+}
+
+#codigo {
+  width: 11%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.filaVacia {
+  padding-top: 20px;
+}
+
+
+.gris {
+  background-color: #EAEAEA;
+}
+
+#filaVaciaD {
+  padding-top: 50px;
+}
+
+.contenedorM {
+  display: flex;
+}
+
+#listaAsis {
+  margin-bottom: 5px;
+}
+
+#tabla1 {
+  float: left;
+  margin-left: 10%;
+  margin-bottom: 2rem;
+}
+
+#tabla2 {
+  width: 40%;
+  float: left;
+  margin-right: 10%;
+  margin-bottom: 2rem;
+}
+
+#ancho {
+  width: 500px;
+}
+
+form {
+  font-size: 12px
+}
+
+input,
+textarea {
+  border: 0;
+  outline: none;
+}
